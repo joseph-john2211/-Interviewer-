@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1>Add Candidate</h1>
+    <div>
+        <a href="user">Home</a>
+        <p></p>
+    </div>
+    <div>
+        <form action="addcandidates" method="POST">
+            {% csrf_token %}
+            <!--
+
+            
+            {{formset.management_form}}
+            <input type="text" name="interviewname" id="" placeholder="Interview Name"><br><p></p>
+            <input type="number" name="interviewid" id="" placeholder="Interview ID"><br><p></p>
+            
+            
+            
+            {% for form in formset %} 
+            {{form}}
+            <p></p>
+            {% endfor %} 
+            <br>
+            -->
+            <input type="text" name="interviewname" id="" placeholder="Interview Name"><br><p></p>
+            <input type="number" name="interviewid" id="" placeholder="Interview ID"><br><p></p>
+            <input type="text" name="candidatename1" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail1" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename2" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail2" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename3" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail3" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename4" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail4" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename5" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail5" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename6" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail6" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename7" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail7" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename8" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail8" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename9" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail9" id="" placeholder="Email ID"><br><p></p>
+            <input type="text" name="candidatename10" id="" placeholder="Candidate Name">&emsp;<input type="email" name="candidateemail10" id="" placeholder="Email ID"><br><p></p>
+            <div>
+                <button type="submit" class="btn btn-danger btn-lg"> Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    
+
+    {% else %}
+    <h1>Please Sign In to continue</h1>
+    {% endif %} 
+
+    
+</body>
+</html>

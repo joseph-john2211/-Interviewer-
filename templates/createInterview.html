@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Interview</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1>Create Interview</h1>
+    <div>
+        <a href="user">Home</a>
+        <p></p>
+    </div>
+    <div>
+        <form action="createInterview" method="POST">
+            {% csrf_token %}
+            {{formset.management_form}}
+            <input type="text" name="interviewname" id="" placeholder="Interview Name"><br><p></p>
+            <input type="number" name="interviewid" id="" placeholder="Interview ID"><br><p></p>
+            
+            <input type="number" name="noofcandidate" id="" placeholder="No.Of.Candidates"><br><p></p>
+            
+            {% for form in formset %} 
+            {{form}}
+            <p></p>
+            {% endfor %} 
+            <br>
+            <div>
+                <button type="submit" class="btn btn-danger btn-lg"> Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    
+
+    {% else %}
+    <h1>Please Sign In to continue</h1>
+    {% endif %} 
+
+    
+</body>
+</html>

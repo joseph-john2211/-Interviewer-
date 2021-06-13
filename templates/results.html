@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1> Hello, {{user.first_name}}</h1>
+    
+    <h1>Results</h1>
+    <div>
+        <a href="user">Home</a>
+        <p></p>
+    </div>
+    <p>List of Interviews created By {{username}}</p>
+    <!--
+    <ul>
+        {% for name in result %}
+          <li>{{ name }}</li>
+        {% endfor %} 
+    </ul>
+    -->
+    <table border="1">
+        <thead>
+            <th>Interview Name</th>
+            <th>Interview ID</th>
+            <th>Candidate Name</th>
+            <th>Candidate Email</th>
+        </thead>
+        {% for row in result %}
+        <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+        </tr>
+        {% endfor %} 
+
+    </table>
+    <h3>Enter the details of any one candidate to get the Report</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="interviewname" id="" placeholder="Interview Name"><p></p>
+        <input type="number" name="interviewid" id="" placeholder="Interview ID"><p></p>
+        <input type="text" name="candidatename" id="" placeholder="Candidate Name"><p></p>
+        <input type="email" name="candidateemail" id="" placeholder="Candidate Email"><p></p>
+        <div>
+            <button type="submit" class="btn btn-danger btn-lg"> Submit</button>
+        </div>
+    </form>
+    {% else %}
+    <h1>Please Sign In to continue</h1>
+    {% endif %}     
+</body>
+</html>

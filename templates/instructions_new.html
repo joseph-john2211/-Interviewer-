@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'instructions.css' %}" type="text/css">
+    <title>Instructions</title>
+</head>
+<body>
+  <div id="header_wrapper">
+      <div id="header">
+          <h2>Interviewer</h2>
+      </div>
+  </div>
+
+    <h1> Welcome {{candidatename}} to this interview on {{interviewname}}</h1>
+    <h4> Please Follow this Instructions to answer your questions</h4>
+    <div id="para">
+      <p>The duration of this exam is  25 minutes.<br><br>
+
+Allow adequate time to complete this exam in one sitting before the due date and time.<br> <br>
+
+ The following materials and provisions are permitted: <br><br>
+
+* Rough Sheet / Paper <br><br>
+* Writing materials  <br><br>
+
+
+There are 10 questions in this exam and will be presented one at a time at once. <br><br>
+
+Each question is worth the different marks. <br><br>
+
+The examination is worth 100% of the marks available in this subject. The contribution each question makes to the total examination mark is indicated  as a percentage. <br><br>
+During this exam you will/won’t be permitted to review previous questions. <br><br>
+
+If you have technical difficulties with your exam, contact mail@gmail.com <br><br>
+  </p>
+  <h4>Examination Conduct</h4>
+  <p>You are not permitted to obtain assistance by improper means or ask for help from or give help to any other person. <br><br>
+You are not permitted to take screenshots, record the screen, copy and paste questions or answers or otherwise attempt to take any of the content of this exam out of the exam for any purpose. <br><br>
+You are not permitted to post any requests for clarification of exam content. Answer all questions to the best of your ability and perception of the questions’ intent, make reasonable assumptions if necessary, to answer all questions. <br><br>
+
+Misconduct action will be taken against you if you breach the above rules. <br><br>
+</p>
+<form class="frm" action="" method="post">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> By attempting this exam, I agree to be bound by the rules, codes of conduct, and other policies relating to examinations </label><br>
+
+</form>
+
+</div>
+    
+    <a href="questionone"><button class="submit" type="button"> Submit </button></a>
+
+</body>
+</html>

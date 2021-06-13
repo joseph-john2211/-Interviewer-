@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1> Hello, {{user.first_name}}</h1>
+    <a href="signout">Sign out</a><br>
+    <p></p>
+    <p><a href="createInterview">Create Interview</a>&emsp;<a href="addcandidates">Add Candidates</a></p>&emsp;<a href="results">Results</a></p>
+    
+
+    {% else %}
+    <h1>Please Sign In to continue</h1>
+    {% endif %} 
+    
+</body>
+</html>

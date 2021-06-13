@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+    <h1>Please enter the details to validate your Request</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="candidatename" id="" placeholder="Name"><br><p></p>
+        <input type="email" name="candidateemail" id="" placeholder="Email"><br><p></p>
+        <input type="number" name="interviewid" id="" placeholder="Interview ID"><br><p></p>
+        <input type="text" name="interviewname" id="" placeholder="Interview Name"><br><p></p>
+        <input type="submit" name="" id="">
+    </form>
+    <div id="errorMessage">
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
